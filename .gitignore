@@ -18,3 +18,44 @@
 .phpunit.result.cache
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
+
+###> IDE files ###
+.history/
+.vscode/
+.phpintel/
+sftp-config.json
+###< IDE files ###
+
+###> ignore compressed files ###
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.swf
+*.db
+###< ignore compressed files ###
+
+###> ignore compiled files ###
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+###< ignore compiled files ###
+
+###> error log files ###
+error_log
+error.error_log
+###< error log files ###
+
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###
