@@ -26,6 +26,7 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addEntry( "app", "./assets/website/index.js" )
+    .addEntry( "app-home", "./assets/website/home.js" )
     .addStyleEntry( "global", "./assets/website/styles/index.scss" )
 
     .copyFiles( {

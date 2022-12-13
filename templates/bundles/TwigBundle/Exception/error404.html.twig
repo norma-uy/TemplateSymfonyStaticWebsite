@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    {{ 'page.home.title'|trans }}
+    {{ 'page.error404.title'|trans }}
 {% endblock title %}
 
 {% block stylesheets %}
@@ -12,28 +12,24 @@
     {% endfor %}
 {% endblock stylesheets %}
 
-{% block javascripts %}
-    {% for jsFile in encore_entry_js_files('app-home', 'website-config') %}
-        {% cspscript %}
-        <script nonce="{{ csp_nonce('script') }}" src="{{ asset(jsFile) }}" defer></script>
-        {% endcspscript %}
-    {% endfor %}
-{% endblock javascripts %}
-
 {% block header %}
     <div class="header">
         {# LOGO #}
         <h1>
-            {{ 'page.home.title'|trans }}
+            {{ 'page.error404.title'|trans }}
         </h1>
         {# NAV #}
     </div>
 {% endblock header %}
 
 {% block main %}
-    {# INICIO #}
-    <section role="contentinfo" class="row"></section>
-    {# / CLIENTES QUE CONFIAN EN NOSOTROS #}
+    <h1>
+        {{ status_code }} {{ status_text }}
+    </h1>
+
+    <p>
+        <a href="{{ path('home-page') }}">Página de inicio</a>.
+    </p>
 {% endblock main %}
 
 {# FOOTER #}
