@@ -34,17 +34,22 @@
     "scripts": {
         "dev-server": "encore dev-server",
         "dev-server:website": "encore dev-server --config-name website-config",
+        "dev-server:bootstrap-examples": "encore dev-server --config-name bootstrap-examples-config",
         "dev": "encore dev",
         "dev:website": "encore dev --config-name website-config",
+        "dev:bootstrap-examples": "encore dev --config-name bootstrap-examples-config",
         "watch": "encore dev --watch",
         "watch:website": "encore dev --watch --config-name website-config",
+        "watch:bootstrap-examples": "encore dev --watch --config-name bootstrap-examples-config",
         "build": "encore production --progress",
         "build:website": "encore production --progress --config-name website-config",
+        "build:bootstrap-examples": "encore production --progress --config-name bootstrap-examples-config",
         "test:lint:js": "npx eslint \"*.{js,jsx,ts,tsx}\" \"assets/**/*.{js,jsx,ts,tsx}\"",
         "test:lint:css": "npx stylelint \"assets/**/*.{css,scss,less}\"",
         "fix:lint:js": "npx eslint \"*.{js,jsx,ts,tsx}\" \"assets/**/*.{js,jsx,ts,tsx}\" --fix",
         "fix:lint:css": "npx stylelint \"assets/**/*.{css,scss,less}\" --fix",
-        "format": "prettier --write \"*.{js,jsx,ts,tsx,json,php}\" \"assets/**/*.{js,jsx,ts,tsx,css,scss,json}\" \"templates/**/*.html.twig\" \"src/**/*.php\" \"tests/**/*.php\""
+        "format": "prettier --write \"*.{js,jsx,ts,tsx,json,php}\" \"assets/**/*.{js,jsx,ts,tsx,css,scss,json}\" \"templates/**/*.html.twig\" \"src/**/*.php\" \"tests/**/*.php\"",
+        "format:fix": "prettier --write \"*.{js,jsx,ts,tsx,json,php}\" \"assets/**/*.{js,jsx,ts,tsx,css,scss,json}\" \"templates/**/*.html.twig\" \"src/**/*.php\" \"tests/**/*.php\" && npm run fix:lint:js && npm run fix:lint:css"
     },
     "browserslist": [
         "> 0.5%",
