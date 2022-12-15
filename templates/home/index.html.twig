@@ -5,39 +5,68 @@
 {% endblock title %}
 
 {% block stylesheets %}
-    {% for cssFile in encore_entry_css_files('global', 'website-config') %}
-        <link {{ app.environment == 'prod' ? 'nonce="' ~ csp_nonce('style') ~ '"' : '' }}
-            rel="stylesheet"
-            href="{{ cssFile }}" />
+    {% for cssFile in encore_entry_css_files('global', 'bootstrap-examples-config') %}
+        <link {{ app.environment == 'prod' ? 'nonce="' ~ csp_nonce('style') ~ '"' : '' }} rel="stylesheet" href="{{ cssFile }}" />
+    {% endfor %}
+    {% for cssFile in encore_entry_css_files('heroes', 'bootstrap-examples-config') %}
+        <link {{ app.environment == 'prod' ? 'nonce="' ~ csp_nonce('style') ~ '"' : '' }} rel="stylesheet" href="{{ cssFile }}" />
     {% endfor %}
 {% endblock stylesheets %}
 
 {% block javascripts %}
-    {% for jsFile in encore_entry_js_files('app-home', 'website-config') %}
+    {% for jsFile in encore_entry_js_files('home', 'bootstrap-examples-config') %}
         {% cspscript %}
         <script nonce="{{ csp_nonce('script') }}" src="{{ asset(jsFile) }}" defer></script>
         {% endcspscript %}
     {% endfor %}
 {% endblock javascripts %}
 
+{% block metatags %}
+
+{% endblock metatags %}
+
 {% block header %}
-    <div class="header">
-        {# LOGO #}
-        <h1>
-            {{ 'page.home.title'|trans }}
-        </h1>
-        {# NAV #}
-    </div>
+    {% include 'bootstrap_examples/menu.html.twig' %}
 {% endblock header %}
 
 {% block main %}
-    {# INICIO #}
-    <section role="contentinfo" class="row"></section>
-    {# / CLIENTES QUE CONFIAN EN NOSOTROS #}
+    <main>
+        <h1 class="visually-hidden">
+            Bootstrap examples
+        </h1>
+
+        <div class="px-4 py-5 my-5 text-center">
+            <img class="d-block mx-auto mb-4"
+                src="{{ asset('build/bootstrap-examples/images/examples/brand/bootstrap-logo.svg') }}"
+                alt=""
+                width="72"
+                height="57" />
+            <h1 class="display-5 fw-bold">
+                Ejemplos Bootstrap
+            </h1>
+            <div class="col-lg-6 mx-auto">
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <a href="{{
+                        path(
+                            'bootstrap-examples-page',
+                            {
+                                page: 'index'
+                            }
+                        )
+                        }}"
+                        class="btn btn-primary btn-lg px-4 gap-3">
+                        Ir a ejemplos
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="b-example-divider"></div>
+    </main>
 {% endblock main %}
 
 {# FOOTER #}
 {% block footer %}
-    <div class="footer"></div>
+
 {% endblock footer %}
 {# / FOOTER #}

@@ -11,10 +11,14 @@
         <meta name="Keywords" content="template,symfony,cygnus" />
         <meta name="title" content="{{ website.name }}" />
         <meta name="format-detection" content="telephone=no" />
-        <meta name="theme-color" content="#509F2C" />
+        <meta name="theme-color" content="#712cf9" />
         <meta name="msapplication-navbutton-color" content="#509F2C" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="#509F2C" />
+
+        {% block metatags %}
+
+        {% endblock metatags %}
 
         <title>
             {% block title %}
@@ -30,23 +34,17 @@
         {% endblock stylesheets %}
     </head>
     <body>
-        <header id="header" role="banner">
-            {% block header %}
+        {% block header %}
 
-            {% endblock header %}
-        </header>
+        {% endblock header %}
 
-        <main id="main" role="main" class="main-{{ pageName }}">
-            {% block main %}
+        {% block main %}
 
-            {% endblock main %}
-        </main>
+        {% endblock main %}
 
-        <footer id="footer" role="contentinfo">
-            {% block footer %}
+        {% block footer %}
 
-            {% endblock footer %}
-        </footer>
+        {% endblock footer %}
 
         {% block javascripts %}
 

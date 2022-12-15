@@ -11,10 +11,7 @@
         "at-rule-no-unknown": null,
         "declaration-block-trailing-semicolon": null,
         "no-descending-specificity": null,
-        "annotation-no-unknown": [
-            true,
-            { "ignoreAnnotations": ["/^default/"] }
-        ],
+        "annotation-no-unknown": [true, { "ignoreAnnotations": ["/^default/"] }],
         "scss/at-rule-no-unknown": [
             true,
             {
@@ -23,6 +20,7 @@
         ],
         "scss/dollar-variable-pattern": null,
         "scss/selector-no-redundant-nesting-selector": true,
-        "scss/no-global-function-names": null
+        "scss/no-global-function-names": null,
+        "color-function-notation": ["modern", "legacy"]
     }
 }
