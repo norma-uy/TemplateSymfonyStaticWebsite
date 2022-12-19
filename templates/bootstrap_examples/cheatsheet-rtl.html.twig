@@ -8,7 +8,7 @@
     {% for cssFile in encore_entry_css_files('global', 'bootstrap-examples-config') %}
         <link {{ app.environment == 'prod' ? 'nonce="' ~ csp_nonce('style') ~ '"' : '' }} rel="stylesheet" href="{{ cssFile }}" />
     {% endfor %}
-    {% for cssFile in encore_entry_css_files('heroes', 'bootstrap-examples-config') %}
+    {% for cssFile in encore_entry_css_files('cheatsheet-rtl', 'bootstrap-examples-config') %}
         <link {{ app.environment == 'prod' ? 'nonce="' ~ csp_nonce('style') ~ '"' : '' }} rel="stylesheet" href="{{ cssFile }}" />
     {% endfor %}
 {% endblock stylesheets %}
