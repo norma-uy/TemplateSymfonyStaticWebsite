@@ -159,10 +159,7 @@ Encore
     .addStyleEntry('dashboard', './assets/bootstrap-examples/styles/dashboard.scss')
     .addStyleEntry('sign-in', './assets/bootstrap-examples/styles/sign-in.scss')
     .addStyleEntry('sticky-footer', './assets/bootstrap-examples/styles/sticky-footer.scss')
-    .addStyleEntry(
-        'sticky-footer-navbar',
-        './assets/bootstrap-examples/styles/sticky-footer-navbar.scss'
-    )
+    .addStyleEntry('sticky-footer-navbar', './assets/bootstrap-examples/styles/sticky-footer-navbar.scss')
     .addStyleEntry('jumbotron', './assets/bootstrap-examples/styles/jumbotron.scss')
     .addStyleEntry('starter-template', './assets/bootstrap-examples/styles/starter-template.scss')
     .addStyleEntry('grid', './assets/bootstrap-examples/styles/grid.scss')

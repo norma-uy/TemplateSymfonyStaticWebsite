@@ -16,6 +16,10 @@
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="#509F2C" />
 
+        {% if app.environment == 'dev' %}
+            <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        {% endif %}
+
         {% block metatags %}
 
         {% endblock metatags %}
